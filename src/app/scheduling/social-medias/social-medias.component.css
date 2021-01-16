@@ -1,0 +1,78 @@
+table {
+    background: #FFFFFF;
+    position: absolute;
+    width: 315px;
+    height: 110px;
+    top: 130px;
+    left: 40px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+th {
+    position: absolute;
+    border-bottom: 1px solid #E0E0E0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-indent: -190px;
+    width: 100%;
+    height: 24px;
+    top: 4px;
+}
+
+.img1 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 21px;
+    bottom: 22px;
+}
+
+.img2 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 69px;
+    right: 213px;
+    bottom: 22px;
+}
+
+.img3 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 117px;
+    bottom: 22px;
+}
+
+.img4 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 165px;
+    bottom: 22px;
+}
+
+.img5 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 213px;
+    bottom: 22px;
+}
+
+.img6 {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    top: 55px;
+    left: 261px;
+    bottom: 22px;
+}
+

@@ -1,0 +1,33 @@
+.header {
+    position: absolute;
+    width: 1440px;
+    height: 80px;
+    position: absolute;
+    background: #FFFFFF;
+}
+
+.img1 {
+    width: 115px;
+    height: 48.42px;
+    margin-top: 16px;
+    margin-left: 40px;
+    border-radius: 0px;
+}
+
+.img2 {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    top: 17px;
+    left: 1213px;
+}
+
+.name {
+    width: 134px;
+    height: 14.67px;
+    position: absolute;
+    left: 1266px;
+    top: 28px;
+    font-family: 'Poppins', sans-serif;
+    
+}

@@ -1,0 +1,31 @@
+img {
+    position: absolute;
+    height: 461px;
+    width: 408px;
+    left: 516px;
+    top: 220px;
+    border-radius: 0px;
+}
+
+button {
+    position: absolute;
+    height: 45px;
+    width: 184px;
+    left: 640px;
+    top: 740px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    background: #F2994A;
+    border: 1px solid #E0812C;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
