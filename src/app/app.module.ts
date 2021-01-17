@@ -1,4 +1,4 @@
-import { DatePublishingComponent } from './scheduling/date-publishing.component';
+import { DatePublishingComponent } from './scheduling/date-publishing/date-publishing.component';
 import { SocialMediasComponent } from './scheduling/social-medias/social-medias.component';
 import { ScheduleComponent } from './scheduling/schedule.component';
 import { HomeComponent } from './home/home.component';

@@ -1,10 +1,10 @@
 table {
     background: #FFFFFF;
     position: absolute;
-    width: 671px;
-    height: 214px;
-    top: 280px;
-    left: 40px;
+    width: 315px;
+    height: 110px;
+    top: 130px;
+    left: 396px;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -15,19 +15,8 @@ th {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    text-indent: -549px;
+    text-indent: -140px;
     width: 100%;
     height: 24px;
     top: 4px;
-}
-
-textarea {
-    position: absolute;
-    top: 52px;
-    left: 15.04px;
-    border: 1px solid #949494;
-    box-sizing: border-box;
-    width: 638.9px;
-    height: 146px;
-    border-radius: 4px;
 }
