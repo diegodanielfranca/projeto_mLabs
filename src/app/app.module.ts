@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { PostTextComponent } from './scheduling/post-text/post-text.component';
 import { ImgUploaderComponent } from './scheduling/img-uploader/img-uploader.component';
 import { PostViewComponent } from './scheduling/post-view/post-view.component';
+import { ListShcedulingComponent } from './list-shceduling/list-shceduling.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PostViewComponent } from './scheduling/post-view/post-view.component';
     PostTextComponent,
     ImgUploaderComponent,
     PostViewComponent,
+    ListShcedulingComponent,
   ],
   imports: [
     BrowserModule,
