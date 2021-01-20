@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImgUploaderComponent implements OnInit {
 
+  public fileToUpload: File = null;
+
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void { }
+
+  public handleFileInput(files: FileList) {
+    this.fileToUpload = files.item(0);
+    console.log('carregou essa merda');
+    console.log(this.fileToUpload);
   }
 
 }

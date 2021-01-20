@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class DatePublishingComponent implements OnInit {
 
+    public dateSent: any = '';
+    public todaysdate: any;
+
     constructor() { }
 
     public ngOnInit(): void { }
+
+    public click(dateSent) {
+        console.log(dateSent);
+    }
 
 }

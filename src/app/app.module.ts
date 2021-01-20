@@ -1,3 +1,5 @@
+import { SocialMidiaService } from './services/social-midias.service';
+import { SchedulesService } from './services/schedules.service';
 import { DatePublishingComponent } from './scheduling/date-publishing/date-publishing.component';
 import { SocialMediasComponent } from './scheduling/social-medias/social-medias.component';
 import { ScheduleComponent } from './scheduling/schedule.component';
@@ -12,6 +14,9 @@ import { PostTextComponent } from './scheduling/post-text/post-text.component';
 import { ImgUploaderComponent } from './scheduling/img-uploader/img-uploader.component';
 import { PostViewComponent } from './scheduling/post-view/post-view.component';
 import { ListShcedulingComponent } from './list-shceduling/list-shceduling.component';
+import { FormsModule }   from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,9 +33,11 @@ import { ListShcedulingComponent } from './list-shceduling/list-shceduling.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [SchedulesService, SocialMidiaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

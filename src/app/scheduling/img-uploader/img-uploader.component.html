@@ -2,13 +2,27 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 </style>
 
+
+<script src="https://s3-eu-west-1.amazonaws.com/boostera.assets/boostera.umd.js"></script>
+<script>
+    const options = {
+        uploadFinishedCallback: (info) => { console.log(info) },
+    }
+    const boostera = BoosteraUploadWidget(options);
+</script>
+
 <body>
     <table>
-        <tr>
+        <!-- <tr>
             <th>Upload de imagem</th>
         </tr>
         <tr>
             <textarea placeholder="Aqui ficara o carregamento de IMAGEM"></textarea>
-        </tr>
+        </tr> -->
+        <!-- <label for="file">Choose File</label> -->
+        <input type="file" (change)="handleFileInput($event.target.files)">
+        <!-- <div *ngIf="fileToUpload"> -->
+        <!-- <img *ngIf="fileToUpload" src="./img-uploader.component.ts/fileToUpload"> -->
+        <!-- </div> -->
     </table>
 </body>

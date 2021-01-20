@@ -8,8 +8,9 @@
             <th>Data de publicação</th>
         </tr>
         <tr>
-            <p>Data</p>
-            <p>Hora</p>
+            <input style="position: absolute;  left: 20px;" type="date" class="from-control" [max]="todaysdate" [(ngModel)]="dateSent"
+                placeholder="DD/MM" />
+            <input style="position: absolute;  left: 173px;" type="time" class="from-control" [max]="todaysdate" placeholder="DD/MM" (ngOnChange)="dateSent" (click)="dateSent"/>
         </tr>
     </table>
 </body>

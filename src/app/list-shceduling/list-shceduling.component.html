@@ -17,14 +17,14 @@
         </thead>
     </table>
     <table class="table2">
-        <tbody>
+        <tbody *ngIf="schedule">
             <tr>
-                <th colspan="1">Imagem</th>
-                <th colspan="1">Imagem</th>
-                <th colspan="1">Aqui vai o texto descritivo desse post</th>
-                <th colspan="1">09/09/2021 às 14h25h</th>
-                <th colspan="1"><a>Preview</a></th>
-                <th colspan="1">Status OK</th>
+                <th *ngFor="let item of schedule">{{ item.text }}</th>
+                <th>{{item.media}}</th>
+                <th>{{item.text}}</th>
+                <th>{{item.publication_date}}</th>
+                <th><a>Preview</a></th>
+                <th>{{item.status_key}}</th>
             </tr>
         </tbody>
     </table>
