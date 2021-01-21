@@ -63,3 +63,7 @@ footer {
     line-height: 24px;
     text-align: center;
 }
+
+.scheduleBtn:disabled {
+    background: #2f81ed25;
+}

@@ -22,7 +22,7 @@ th {
 
 }
 
-input {
+.input {
     position: absolute;
     top: 49px;
     /* left: 21px; */
@@ -40,3 +40,19 @@ input {
     height: 42px;
     border: 1px solid #949494;
 } */
+
+.mat-form-field {
+    position: absolute;
+    width: 124px;
+    top: 49px;
+    left: 21px;
+    /* background-color: white; */
+}
+/* .mat-datepicker-toggle{
+    background-color: white;
+} */
+
+/* .mat-datepicker { */
+    /* background-color: white; */
+
+/* } */

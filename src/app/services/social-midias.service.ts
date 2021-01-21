@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class SocialMidiaService {
 
-    private _url: string;
+    private _url = 'https://github.com/mlabssoftware/mlabs-teste/blob/master/front-end/db/';
     private _response: any = `{
         "data": [
             {

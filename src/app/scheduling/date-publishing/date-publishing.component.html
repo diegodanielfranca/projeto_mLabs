@@ -8,9 +8,16 @@
             <th>Data de publicação</th>
         </tr>
         <tr>
-            <input style="position: absolute;  left: 20px;" type="date" class="from-control" [max]="todaysdate" [(ngModel)]="dateSent"
-                placeholder="DD/MM" />
-            <input style="position: absolute;  left: 173px;" type="time" class="from-control" [max]="todaysdate" placeholder="DD/MM" (ngOnChange)="dateSent" (click)="dateSent"/>
+            <!-- <mat-form-field class="mat-form-field" appearance="fill"> -->
+            <mat-form-field class="mat-form-field">
+                <mat-label>MM/DD</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <!-- <input class="input" style="position: absolute;  left: 20px;" type="date" class="from-control" [max]="todaysdate" [(ngModel)]="dateSent"
+                placeholder="DD/MM" /> -->
+            <!-- <input class="input" style="position: absolute;  left: 173px;" type="time" class="from-control" [max]="todaysdate" placeholder="DD/MM" (ngOnChange)="dateSent" (click)="dateSent"/> -->
         </tr>
     </table>
 </body>

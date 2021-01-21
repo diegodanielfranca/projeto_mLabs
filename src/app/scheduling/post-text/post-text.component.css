@@ -31,3 +31,24 @@ textarea {
     height: 146px;
     border-radius: 4px;
 }
+
+.button{
+    position: absolute !important;
+    left: 602.8px;
+    top: 63px;
+    background: none;
+    border: none;
+    /* border-radius: ; */
+    cursor: pointer;
+}
+
+.button:hover{
+    border: none;
+    border-color: white;
+}
+
+.button:active{
+    border: none;
+    border-color: white;
+}
+

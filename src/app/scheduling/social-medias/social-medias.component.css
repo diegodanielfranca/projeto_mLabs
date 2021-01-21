@@ -28,7 +28,7 @@ th {
     top: 55px;
     left: 21px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_instagram.png");
+    background-image:url("../../../assets/images/icon_instagram.png");
 }
 
 .instagram:hover {
@@ -44,7 +44,7 @@ th {
     left: 69px;
     right: 213px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_linkedin.png");
+    background-image:url("../../../assets/images/icon_linkedin.png");
 }
 
 .linkedin-in:hover {
@@ -59,7 +59,7 @@ th {
     top: 55px;
     left: 117px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_youtube.png");
+    background-image:url("../../../assets/images/icon_youtube.png");
 }
 
 /* .youtube:hover {
@@ -74,7 +74,7 @@ th {
     top: 55px;
     left: 165px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_pinterest.png");
+    background-image:url("../../../assets/images/icon_pinterest.png");
 }
 
 /* .pinterest-p:hover {
@@ -89,7 +89,7 @@ th {
     top: 55px;
     left: 213px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_twitter.png");
+    background-image:url("../../../assets/images/icon_twitter.png");
 }
 
 /* .twitter:hover { */
@@ -104,7 +104,7 @@ th {
     top: 55px;
     left: 261px;
     bottom: 22px;
-    background-image:url("../../../assets/icon_facebook.png");
+    background-image:url("../../../assets/images/icon_facebook.png");
 }
 
 /* .facebook-f:hover {

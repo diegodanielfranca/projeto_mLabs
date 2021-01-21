@@ -16,9 +16,11 @@
     <app-img-uploader></app-img-uploader>
 
     <app-post-view></app-post-view>
+
+    <router-outlet></router-outlet>
     <footer>
         <button class="cancelBtn">Cancelar</button>
         <button class="saveBtn" button-secondary>Salvar Rascunho</button>
-        <button class="scheduleBtn" button-primary>Agendar</button>
+        <button *ngIf="globalService" class="scheduleBtn" button-primary [disabled]="!globalService.canProceed()" (click)="goToListSchedule()">Agendar</button>
     </footer>
 </body>

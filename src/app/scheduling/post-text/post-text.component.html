@@ -3,12 +3,22 @@
 </style>
 
 <body>
+    <header>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    </header>
     <table>
         <tr>
             <th>Texto do post</th>
         </tr>
         <tr>
             <textarea id="myTextArea" placeholder="Insira o texto descritivo desse post"></textarea>
+            <button class="button" (click)="toggleEmojiPicker()"> 😀</button>
+
+            <div>
+                <!-- <emoji-mart class="emoji-mart" set="{{set}}" *ngIf="showEmojiPicker"
+                    (emojiSelect)="addEmoji($event)"></emoji-mart> -->
+            </div>
+            <!-- <emoji-mart (emojiClick)="addEmoji($event)" [hideObsolete]="true"></emoji-mart> -->
         </tr>
     </table>
 </body>
