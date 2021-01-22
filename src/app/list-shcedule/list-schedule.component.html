@@ -3,11 +3,10 @@
 </style>
 
 <body>
-    <table class="table1">
-        <!-- <caption>Listagem de agendamento</caption> -->
+    <!-- <table class="table1">
         <thead>
             <tr>
-                <th>Redes Sociais</th>
+                <th class="thRedesSociais">Redes Sociais</th>
                 <th>Mídia</th>
                 <th>Texto</th>
                 <th>Data</th>
@@ -18,14 +17,57 @@
     </table>
     <table class="table2">
         <tbody *ngIf="schedule">
-            <tr>
-                <th *ngFor="let item of schedule">{{ item.text }}</th>
-                <th>{{item.media}}</th>
-                <th>{{item.text}}</th>
-                <th>{{item.publication_date}}</th>
-                <th><a>Preview</a></th>
-                <th>{{item.status_key}}</th>
+            <tr *ngFor="let item of schedule">
+                <td>imagem Rede Social</td>
+                <td><img class="img" src="{{ item.media }}"></td>
+                <td>{{ item.text }}</td>
+                <td>{{ item.publication_date }}</td>
+                <td>Preview</td>
+                <td>status</td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
+
+    <mat-table class="table" [dataSource]="schedule">
+        <ng-container matColumnDef="Redes Sociais">
+            <mat-header-cell *matHeaderCellDef>Redes Sociais</mat-header-cell>
+            <mat-cell *matCellDef="let row">Imagem</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Midia">
+            <mat-header-cell *matHeaderCellDef>Midia</mat-header-cell>
+            <mat-cell *matCellDef="let row"><img class="img" src="{{ row.media }}"></mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Texto">
+            <mat-header-cell *matHeaderCellDef>Texto</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.text}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Data">
+            <mat-header-cell *matHeaderCellDef>Data</mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{row.publication_date}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="Ações">
+            <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+            <mat-cell *matCellDef="let row"> Ações </mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef="Status">
+            <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+            <mat-cell *matCellDef="let row"> Status </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="['Redes Sociais', 'Midia', 'Texto', 'Data', 'Ações', 'Status']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['Redes Sociais', 'Midia', 'Texto', 'Data', 'Ações', 'Status']"></mat-row>
+    </mat-table>
+
+
+
+
+
+
+
+
 </body>

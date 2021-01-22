@@ -27,5 +27,55 @@ button {
     line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
+}
 
+.image-wrap {
+    padding: 10px;
+    border: solid 1px #e0e0e0;
+    display: inline-block;
+    src: url('../../assets/images/mdi_cloud_upload.png')
+}
+
+.img-space {
+    border: dashed 1px #d3d3d3;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    min-height:175px;
+}
+
+.img-space img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+    /* background-image: url('../../assets/images/mdi_cloud_upload.png'); */
+    /* src: url('../../assets/images/mdi_cloud_upload.png'); */
+}
+
+.fileInputProfileWrap {
+    width: 100px;
+    height: 100px;
+    src: url('../../assets/images/mdi_cloud_upload.png')
+}
+
+.fileInputProfile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    opacity: 0;
+    src: url('../../assets/images/mdi_cloud_upload.png')
+}
+.fileInputProfile[disabled] + .img-space{
+    pointer-events: none;
+    cursor: not-allowed!important;
+    src: url('../../assets/images/mdi_cloud_upload.png')
+}
+
+img {
+    src: url('../../assets/images/mdi_cloud_upload.png');
 }

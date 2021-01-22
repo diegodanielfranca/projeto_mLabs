@@ -40,6 +40,6 @@ export class SchedulesService {
         //           observable.error('Erro ao buscar posts agendados. Tente novamente mais tarde.');
         //         });
         // });
-        return of(JSON.parse(this._response.data));
+        return of(JSON.parse(this._response));
     }
 }
