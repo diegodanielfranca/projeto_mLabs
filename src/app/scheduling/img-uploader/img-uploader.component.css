@@ -20,3 +20,118 @@ th {
     height: 24px;
     top: 4px;
 }
+
+.insideTable {
+    position: absolute;
+    width: 637px;
+    height: 187px;
+    top: 40px;
+    left: 15px;
+    background-color: #FFFFFF;
+    border: 2px dashed #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.img {
+    position: absolute;
+    width: 45.02px;
+    height: 30.01px;
+    top: 21.5px;
+    left: 303px;
+}
+
+.texto {
+    position: absolute;
+    width: 533px;
+    height: 100px;
+    top: 62px;
+    left: 58px;
+}
+
+.p {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    color: #828282;
+    padding-left: 25px;
+}
+
+/* Classes de upload de imagem */
+
+.image-wrap {
+    padding: 10px;
+    border: solid 1px #e0e0e0;
+    display: inline-block;
+    src: url('../../../assets/images/mdi_cloud_upload.png')
+}
+
+.img-space {
+    border: dashed 1px #d3d3d3;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    min-height:175px;
+}
+
+.img-space img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+    /* background-image: url('../../assets/images/mdi_cloud_upload.png'); */
+    /* src: url('../../assets/images/mdi_cloud_upload.png'); */
+}
+
+.fileInputProfileWrap {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+   /* src: url('../../assets/images/mdi_cloud_upload.png') */
+}
+
+.fileInputProfile {
+    /* position: absolute; */
+    height: 100px;
+    width: 100px;
+    cursor: pointer; 
+    /* src: url('../../../assets/images/mdi_cloud_upload.png'); */
+}
+.fileInputProfile[disabled] + .img-space{
+    pointer-events: none;
+    cursor: not-allowed!important;
+    /* src: url('../../assets/images/mdi_cloud_upload.png') */
+}
+
+input[type='file'] {
+    display: none
+  }
+
+label {
+    cursor: pointer;
+}
+
+.searchBtn {
+    position: absolute;
+    left: 242px;
+    top: 175px;
+    border: 1px solid #2F80ED;
+    border-radius: 4px;
+    width: 181px;
+    height: 36px;
+    color: #2F80ED;
+    background: #FFFFFF;
+    cursor: pointer;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+

@@ -38,10 +38,11 @@ export class ImgUploaderComponent implements OnInit {
         return false;
       }
 
-      if (![].includes(allowed_types, fileInput.target.files[0].type)) {
-        this.imageError = 'Only Images are allowed ( JPG | PNG )';
-        return false;
-      }
+      // if (![].includes(allowed_types, fileInput.target.files[0].type)) {
+      //   this.imageError = 'Only Images are allowed ( JPG | PNG )';
+      //   return false;
+      // }
+      
       const reader = new FileReader();
       reader.onload = (e: any) => {
         const image = new Image();

@@ -13,13 +13,50 @@
 
 <body>
     <table>
-        <tr>
-            <th>Upload de imagem</th>
-        </tr>
-        <tr>
-            <!-- <textarea placeholder="Aqui ficara o carregamento de IMAGEM"></textarea> -->
-            <!-- <input type="file" (change)="handleFileInput($event.target.files)"> -->
-        </tr>
+        <thead>
+            <tr>
+                <th>Upload de imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="insideTable">
+                <span class="img">
+                    <img src="../../../assets/images/mdi_cloud_upload.png" />
+                </span>
 
+                <div class="texto">
+                    <p class="p">Arraste e solte uma imagem aqui ou clique no botão abaixo</p>
+                </div>
+            </div>
+        </tbody>
+
+        <tfoot>
+            <!-- <button for='selecao-arquivo' class="searchBtn" button-secondary>Pesquisar Imagem</button> -->
+            <label for='selecao-arquivo' class="searchBtn">Pesquisar Imagens</label>
+
+            <form>
+                <div class="form-group">
+                    <fieldset class="form-group">
+                        <div class="custom-file fileInputProfileWrap">
+                            <input id='selecao-arquivo' type="file" (change)="fileChangeEvent($event)"
+                                class="fileInputProfile">
+                            <div class="img-space">
+                                <ng-container *ngIf="isImageSaved; else elseTemplate">
+                                    <img [src]="cardImageBase64" />
+                                </ng-container>
+                                <ng-template #elseTemplate>
+
+                                    <img src="./../../assets/placeholder.png" class="img-responsive">
+                                </ng-template>
+
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+                <a class="btn btn-danger" (click)="removeImage()" *ngIf="isImageSaved">Remove</a>
+            </form>
+
+        </tfoot>
     </table>
 </body>
