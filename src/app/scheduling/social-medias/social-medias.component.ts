@@ -13,13 +13,14 @@ import { SocialMidiaService } from 'src/app/services/social-midias.service';
 export class SocialMediasComponent implements OnInit {
 
     public socialMidias: SocialMidiasModel;
+    public clicked: boolean = false;
 
     constructor(private socialMidiasService: SocialMidiaService) { }
 
     public ngOnInit() {
+        // console.log(this.clicked);
         this.getSocialMidias();
     }
-
 
     private getSocialMidias(): void {
         this.socialMidiasService.getSocialMidias()
@@ -30,7 +31,10 @@ export class SocialMediasComponent implements OnInit {
             });
     }
 
-    public onClickIcon(value: any): void{
+    public onClickIcon(value: any): void {
+        if (value === "Instagram") {
+
+        }
         console.log(value);
     }
 

@@ -29,11 +29,30 @@ th {
     left: 21px;
     bottom: 22px;
     background-image:url("../../../assets/images/icon_instagram.png");
+    /* border-radius: 3px; */
 }
 
 .instagram:hover {
-    background-color: yellowgreen;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 55px;
+    left: 21px;
+    bottom: 22px;
+    /* background-color: #FFF3E0; */
     cursor: pointer;
+    background-image:url("../../../assets/images/insta_focus.png");
+}
+
+.instagram:active{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 55px;
+    left: 21px;
+    bottom: 22px;
+    cursor: pointer;
+    background-image:url("../../../assets/images/instagram_pressed.png");
 }
 
 .linkedin-in {
@@ -48,8 +67,26 @@ th {
 }
 
 .linkedin-in:hover {
-    background-color: yellowgreen;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 55px;
+    left: 69px;
+    right: 213px;
+    bottom: 22px;
     cursor: pointer;
+    background-image:url("../../../assets/images/linkedin_Hovered.png");
+}
+
+.linkedin-in:active {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 55px;
+    left: 69px;
+    right: 213px;
+    bottom: 22px;
+    background-image:url("../../../assets/images/linkedin_pressed.png");
 }
 
 .youtube {
@@ -62,11 +99,6 @@ th {
     background-image:url("../../../assets/images/icon_youtube.png");
 }
 
-/* .youtube:hover {
-    background-color: yellowgreen;
-    cursor: pointer;
-} */
-
 .pinterest-p {
     width: 33px;
     height: 33px;
@@ -76,11 +108,6 @@ th {
     bottom: 22px;
     background-image:url("../../../assets/images/icon_pinterest.png");
 }
-
-/* .pinterest-p:hover {
-    background-color: yellowgreen;
-    cursor: pointer;
-} */
 
 .twitter {
     width: 33px;
@@ -92,10 +119,6 @@ th {
     background-image:url("../../../assets/images/icon_twitter.png");
 }
 
-/* .twitter:hover { */
-    /* background-color: yellowgreen;
-    cursor: pointer;
-} */
 
 .facebook-f {
     width: 33px;
@@ -106,8 +129,3 @@ th {
     bottom: 22px;
     background-image:url("../../../assets/images/icon_facebook.png");
 }
-
-/* .facebook-f:hover {
-    background-color: yellowgreen;
-    cursor: pointer;
-} */

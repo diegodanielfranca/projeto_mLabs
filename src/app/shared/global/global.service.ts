@@ -8,7 +8,6 @@ export class GlobalService {
     public midias: Array<any> = ['', ''];
 
     public canProceed(): boolean {
-        console.log(1 + 1);
         return true;
     }
 
