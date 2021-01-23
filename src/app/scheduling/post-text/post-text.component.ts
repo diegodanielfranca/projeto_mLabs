@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PostTextComponent implements OnInit {
 
   public showEmojiPicker = false;
-  public message = '';
+  public postText = '';
 
   public sets = [
     'native',
@@ -22,31 +22,23 @@ export class PostTextComponent implements OnInit {
   set = 'google';
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  // public addEmoji(event: any): void {
-  //   console.log(event);
-  // }
-
-  toggleEmojiPicker() {
+  public toggleEmojiPicker() {
     console.log(this.showEmojiPicker);
         this.showEmojiPicker = !this.showEmojiPicker;
   }
 
-  onFocus() {
-    console.log('focus');
+  public onFocus() {
     this.showEmojiPicker = false;
   }
 
-  addEmoji(event) {
-    const { message } = this;
-    console.log(message);
-    console.log(`${event.emoji.native}`)
-    const text = `${message}${event.emoji.native}`;
-
-    this.message = text;
-    // this.showEmojiPicker = false;
+  public addEmoji(event) { 
+    setTimeout(() => {
+      const _emoji = event.emoji.native;
+      this.postText = this.postText.concat(_emoji);
+      this.showEmojiPicker = false;
+    }, 1000);
   }
 
 }

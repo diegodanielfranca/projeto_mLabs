@@ -20,7 +20,7 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // emoji libary
-// import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { PickerModule } from '@ctrl/ngx-emoji-mart';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // material
@@ -132,6 +132,7 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    PickerModule
   ],
   providers: [SchedulesService, SocialMidiaService, GlobalService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 table {
     background: #FFFFFF;
+    display: flex;
     position: absolute;
     width: 671px;
     height: 239px;

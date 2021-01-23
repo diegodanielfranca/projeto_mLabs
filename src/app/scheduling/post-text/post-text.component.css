@@ -1,5 +1,5 @@
 table {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     position: absolute;
     width: 671px;
     height: 214px;
@@ -30,6 +30,8 @@ textarea {
     width: 638.9px;
     height: 146px;
     border-radius: 4px;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .button{
@@ -50,5 +52,11 @@ textarea {
 .button:active{
     border: none;
     border-color: white;
+}
+
+.emogi-picker {
+    position: fixed !important;
+    left: 340px;
+    top: 370px;
 }
 

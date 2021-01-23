@@ -12,29 +12,4 @@
 </body>
 <footer>
     <button (click)="schedule()" button-primary>Agendar post</button>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <form>
-        <div class="form-group">
-            <fieldset class="form-group">
-
-                <label>Upload Logo</label>
-                <div class="custom-file fileInputProfileWrap">
-                    <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
-                    <div class="img-space">
-                        <ng-container *ngIf="isImageSaved; else elseTemplate"> -->
-                            <!-- <img [src]="cardImageBase64" /> -->
-                            <img src="../../assets/images/mdi_cloud_upload.png" />
-                        </ng-container>
-                        <ng-template #elseTemplate>
-
-                            <img src="./../../assets/mdi_cloud_upload.jpg" class="img-responsive">
-                        </ng-template>
-
-                    </div>
-
-                </div>
-            </fieldset>
-        </div>
-    </form>
 </footer>
