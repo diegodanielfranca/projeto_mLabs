@@ -3,4 +3,5 @@ export interface SocialMidiasModel {
     name: string;
     icon: string;
     status: string;
+    clicked: boolean;
 }

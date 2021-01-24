@@ -31,11 +31,12 @@ export class SocialMediasComponent implements OnInit {
             });
     }
 
-    public onClickIcon(value: any): void {
-        if (value === "Instagram") {
-
-        }
-        console.log(value);
+    public onClickIcon(selectedSocialMidia: SocialMidiasModel): void {
+        // if (selectedSocialMidia.clicked === false) {
+        //     selectedSocialMidia.clicked = true;
+        // }
+        selectedSocialMidia.clicked = !selectedSocialMidia.clicked ? true : false;
+        console.log(selectedSocialMidia);
     }
 
 }

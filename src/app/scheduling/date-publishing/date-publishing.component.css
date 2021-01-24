@@ -32,27 +32,25 @@ th {
     border-radius: 2px;
 }
 
-/* .time {
+.time {
     position: absolute;
-    top: 49px;
-    left: 173px;
+    top: 0px;
+    left: 190px;
     width: 124px;
     height: 42px;
-    border: 1px solid #949494;
-} */
+    /* border: 1px solid #949494; */
+}
 
-.mat-form-field {
+.datePicker {
     position: absolute;
     width: 124px;
-    top: 49px;
+    top: 42px;
     left: 21px;
-    /* background-color: white; */
 }
-/* .mat-datepicker-toggle{
-    background-color: white;
-} */
+.timePicker {
+    position: absolute;
+    width: 124px;
+    top: 42px;
+    left: 170px;
+}
 
-/* .mat-datepicker { */
-    /* background-color: white; */
-
-/* } */

@@ -10,8 +10,12 @@
         <tr>
             <span *ngFor="let socialMidia of socialMidias">
                 <i [class]="socialMidia.icon" [disabled]="socialMidia.status === disabled"
-                    (click)="onClickIcon(socialMidia.name)"></i>
+                    (click)="onClickIcon(socialMidia)"></i>
             </span>
         </tr>
     </table>
 </body>
+<!-- [class]="socialMidia.icon"  -->
+<!-- [ngClass]="{
+    'socialMidia.icon': socialMidia.clicked
+    }" -->
