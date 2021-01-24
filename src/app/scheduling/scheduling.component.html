@@ -21,6 +21,6 @@
     <footer>
         <button class="cancelBtn">Cancelar</button>
         <button class="saveBtn" button-secondary>Salvar Rascunho</button>
-        <button *ngIf="globalService" class="scheduleBtn" button-primary [disabled]="!globalService.canProceed()" (click)="goToListSchedule()">Agendar</button>
+        <button *ngIf="globalService" class="scheduleBtn" button-primary [disabled]="!globalService.canProceed()" (click)="openDialog()">Agendar</button>
     </footer>
 </body>

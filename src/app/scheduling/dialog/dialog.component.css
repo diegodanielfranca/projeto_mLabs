@@ -1,0 +1,27 @@
+.img {
+    display: flex;
+    margin-left: 315px;
+}
+
+.p {
+    display: flex;
+    width: 305px;
+    margin-left: 275px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.button {
+    display: flex;
+    height: 45px;
+    width: 184px;
+    left: 321px;
+    padding-left: 84px;
+    bottom: 20px;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #2F80ED;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}

@@ -73,6 +73,7 @@ import {
   NgxMatNativeDateModule,
   NgxMatTimepickerModule
 } from '@angular-material-components/datetime-picker';
+import { DialogComponent } from './scheduling/dialog/dialog.component';
 
 
 
@@ -88,6 +89,7 @@ import {
     ImgUploaderComponent,
     PostViewComponent,
     ListScheduleComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,

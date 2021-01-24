@@ -15,7 +15,7 @@ footer {
     width: 90px;
     height: 27px;
 
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -35,7 +35,7 @@ footer {
     color: #2F80ED;
     background: #FFFFFF;
 
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -56,7 +56,7 @@ footer {
     color: #FFFFFF;
     background: #2F80ED;
 
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -66,4 +66,8 @@ footer {
 
 .scheduleBtn:disabled {
     background: #2f81ed25;
+}
+
+.dialog {
+    background: gray;
 }
