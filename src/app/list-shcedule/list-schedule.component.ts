@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SchedulesService } from '../services/schedules.service';
 import { ScheduleModule } from '../shared/models/schedule.model';
 
-import * as moment from 'moment';
-// const _moment = moment;
+import * as moment_ from 'moment';
+const moment = moment_;
 
 
 @Component({
@@ -26,15 +26,26 @@ export class ListScheduleComponent implements OnInit {
       .subscribe((_res: any) => {
         this.schedule = _res.data;
         this.formatDate(_res.data);
-        console.log(this.schedule);
+        // console.log(this.schedule);
       });
   }
 
   private formatDate(res: any): void {
+    const _array = this.schedule;
+    let count = 0
+
+    _array.forEach((_field: ScheduleModule) => {
+      let date;
+
+      date = moment(_field.publication_date).format('DD-MM-YYYY HH:mm');
+      this.schedule[count].publication_date = date;
+      count++;
+    });
+
     const field = res[0].publication_date;
 
-    console.log(field.moment().format('YYYY/MM/DD, hh.mm'));
-          // ._moment().format('YYYY/MM/DD, hh.mm');
+    console.log(this.schedule);
+    // console.log(moment(field).format('YYYY-MM-DD HH:mm'));
   }
 
 }
