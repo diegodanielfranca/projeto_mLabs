@@ -6,12 +6,16 @@
     <mat-table class="table" [dataSource]="schedule">
         <ng-container matColumnDef="Redes Sociais">
             <mat-header-cell *matHeaderCellDef>Redes Sociais</mat-header-cell>
-            <mat-cell *matCellDef="let row">Imagem</mat-cell>
+            <mat-cell *matCellDef="let row">
+                <span *ngFor="let icon of row.status">
+                    <i [class]="icon.socialName"></i>
+                </span>
+            </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="Midia">
             <mat-header-cell *matHeaderCellDef>Midia</mat-header-cell>
-            <mat-cell *matCellDef="let row"><img class="img" src="{{ row.media }}"></mat-cell>
+            <mat-cell *matCellDef="let row"><img class="img" src="{{ row.media }}" /></mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="Texto">
@@ -26,12 +30,27 @@
 
         <ng-container matColumnDef="Ações">
             <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
-            <mat-cell *matCellDef="let row"> Preview </mat-cell>
+            <mat-cell *matCellDef="let row"> Sem Ação </mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="Status">
             <mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
-            <mat-cell *matCellDef="let row"> Status </mat-cell>
+            <mat-cell *matCellDef="let row" class="status">
+                <label *ngFor="let status of row.status ">
+                    <span [ngClass]="{
+                        'postado': status.name === 'Postado',
+                        'nPostado': status.name !== 'Postado' 
+                    }">
+                        <!-- {{ status.color }} -->
+                    </span>
+                    <span [ngClass]="{
+                        'postado': status.name === 'Postado',
+                        'nPostado': status.name !== 'Postado' 
+                    }">
+                        {{ status.name }} 
+                    </span>
+                </label>
+            </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="['Redes Sociais', 'Midia', 'Texto', 'Data', 'Ações', 'Status']">

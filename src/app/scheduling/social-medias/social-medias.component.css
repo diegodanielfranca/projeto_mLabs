@@ -29,7 +29,6 @@ th {
     left: 21px;
     bottom: 22px;
     background-image:url("../../../assets/images/icon_instagram.png");
-    /* border-radius: 3px; */
 }
 
 .instagram:hover {
@@ -39,7 +38,6 @@ th {
     top: 55px;
     left: 21px;
     bottom: 22px;
-    /* background-color: #FFF3E0; */
     cursor: pointer;
     background-image:url("../../../assets/images/insta_focus.png");
 }
@@ -118,7 +116,6 @@ th {
     bottom: 22px;
     background-image:url("../../../assets/images/icon_twitter.png");
 }
-
 
 .facebook-f {
     width: 33px;
