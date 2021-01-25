@@ -1,25 +1,49 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ImgUploaderComponent } from './img-uploader.component';
 
 describe('ImgUploaderComponent', () => {
-  let component: ImgUploaderComponent;
-  let fixture: ComponentFixture<ImgUploaderComponent>;
+  let component;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ImgUploaderComponent ]
-    })
-    .compileComponents();
-  }));
+  function setup() {
+    component = new ImgUploaderComponent();
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ImgUploaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    return {
+      component,
+    }
+  }
+
+  describe('should ngOnInit', () => {
+    const {
+      component
+    } = setup();
+
+    it('ngOnInit', () => {
+      component.ngOnInit();
+      expect(component.ngOnInit)
+        .toBeDefined();
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  xdescribe('should fileChangeEvent', () => {
+    const {
+      component
+    } = setup();
+
+    const fileInput = {
+      fileInput: '',
+      target: {
+        fileInput: '',
+        files: [
+          '1',
+          '2'
+        ]
+      }
+    }
+
+    it('fileChangeEvent', () => {
+      component.fileChangeEvent(fileInput);
+      expect(component.fileChangeEvent)
+        .toBeDefined();
+    });
   });
+
 });

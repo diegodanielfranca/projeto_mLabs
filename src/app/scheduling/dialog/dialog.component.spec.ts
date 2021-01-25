@@ -1,25 +1,47 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
 
 import { DialogComponent } from './dialog.component';
 
 describe('DialogComponent', () => {
-  let component: DialogComponent;
-  let fixture: ComponentFixture<DialogComponent>;
+  let dialogRef;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ DialogComponent ]
-    })
-    .compileComponents();
-  }));
+  function setup() {
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(DialogComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    dialogRef = jasmine.createSpyObj('MatDialogRef', ['close']);
+
+    const component = new DialogComponent(dialogRef);
+
+    return {
+      component,
+      dialogRef
+    }
+
+  }
+
+  describe('should ngOnInit', () => {
+    const {
+      component
+    } = setup();
+
+    it('ngOnInit', () => {
+      component.ngOnInit();
+      expect(component.ngOnInit)
+        .toBeDefined();
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('should closeDialog', () => {
+    const {
+      component,
+      dialogRef
+    } = setup();
+
+    it('closeDialog', () => {
+      dialogRef.close.and.returnValue(of());
+
+      component.closeDialog();
+      expect(component.closeDialog)
+        .toBeDefined();
+    });
   });
 });

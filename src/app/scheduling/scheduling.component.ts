@@ -36,7 +36,7 @@ export class SchedulingComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe(result => {
-            this.goToListSchedule();
+        this.goToListSchedule();
         });
     }
 

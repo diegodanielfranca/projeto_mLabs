@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 </style>
 
-<body>
+<div>
     <mat-table class="table" [dataSource]="schedule">
         <ng-container matColumnDef="Redes Sociais">
             <mat-header-cell *matHeaderCellDef>Redes Sociais</mat-header-cell>
@@ -58,4 +58,4 @@
         <mat-row *matRowDef="let row; columns: ['Redes Sociais', 'Midia', 'Texto', 'Data', 'Ações', 'Status']">
         </mat-row>
     </mat-table>
-</body>
+</div>

@@ -2,16 +2,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 </style>
 
-<body>
+<div>
     <table>
         <tr>
             <th>Redes Sociais</th>
         </tr>
         <tr>
             <span *ngFor="let socialMidia of socialMidias">
-                <i [class]="socialMidia.icon" [disabled]="socialMidia.status === disabled"
-                    (click)="onClickIcon(socialMidia)"></i>
+                <button [class]="socialMidia.icon" [disabled]="socialMidia.status === disabled"
+                    (click)="onClickIcon(socialMidia)"></button>
             </span>
         </tr>
     </table>
-</body>
+</div>

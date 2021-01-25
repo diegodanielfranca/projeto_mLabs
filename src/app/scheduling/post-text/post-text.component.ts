@@ -25,7 +25,6 @@ export class PostTextComponent implements OnInit {
   ngOnInit(): void { }
 
   public toggleEmojiPicker() {
-    console.log(this.showEmojiPicker);
         this.showEmojiPicker = !this.showEmojiPicker;
   }
 

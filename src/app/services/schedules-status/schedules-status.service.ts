@@ -8,46 +8,20 @@ import { PostStatus } from 'src/app/shared/models/schedule.model';
 })
 export class SchedulesStatusService {
 
-  public _url: string;
-  public _response: any = `{
-      "data": [
-        {
-          "id": 1,
-          "name": "Agendado",
-          "color": "#2F80ED"
-        },
-        {
-          "id": 2,
-          "name": "Postado",
-          "color": "#27AE60"
-        },
-        {
-          "id": 3,
-          "name": "Não aprovado",
-          "color": "#F2C94C"
-        },
-        {
-          "id": 4,
-          "name": "Postado com ressalvas",
-          "color": "#EB5757"
-        }
-      ]
-    }`;
+  public _url = 'http://localhost:3000/schedules-status';
 
   constructor(public httpClient: HttpClient) { }
 
-  public getSchedules(): Observable<Array<PostStatus>> {
-    // return new Observable((observable) => {
-    //     this.httpClient.get(this._url)
-    //         .subscribe((_res: any) => {
-    //             _res = JSON.parse(this._response);
-    //             observable.next();
-    //             observable.complete();
-    //         }, (error: HttpErrorResponse) => {
-    //           observable.error('Erro ao buscar posts agendados. Tente novamente mais tarde.');
-    //         });
-    // });
-    return of(JSON.parse(this._response));
+  public getSocialMidiasSchedules(): Observable<Array<PostStatus>> {
+    return new Observable((observable) => {
+        this.httpClient.get(this._url)
+            .subscribe((_res: any) => {
+                observable.next(_res);
+                observable.complete();
+            }, (error: HttpErrorResponse) => {
+              observable.error('Erro ao buscar posts agendados. Tente novamente mais tarde.');
+            });
+    });
   }
 
 

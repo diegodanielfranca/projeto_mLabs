@@ -55,8 +55,10 @@ textarea {
 }
 
 .emogi-picker {
-    position: fixed !important;
-    left: 340px;
-    top: 370px;
+    position: relative;
+    /* display: relative; */
+    z-index: 1;
+    left: 280px;
+    bottom: 20px;
 }
 

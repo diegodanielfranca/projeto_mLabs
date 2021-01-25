@@ -1,7 +1,8 @@
 import { of } from 'rxjs';
-import { SchedulesStatusService } from './schedules-status.service';
+import { SchedulesService } from './schedules.service';
 
-describe('SchedulesStatusService', () => {
+
+describe('SchedulesService', () => {
 
   let service;
   let httpClient;
@@ -10,7 +11,7 @@ describe('SchedulesStatusService', () => {
 
     httpClient = jasmine.createSpyObj('HttpClient', ['get']);
 
-    service = new SchedulesStatusService(httpClient);
+    service = new SchedulesService(httpClient);
 
     return {
       service,
@@ -18,17 +19,17 @@ describe('SchedulesStatusService', () => {
     }
   }
 
-  describe('should getSocialMidiasSchedules', () => {
+  describe('should getSchedules', () => {
     const {
       service,
       httpClient
     } = setup();
 
     
-    it('should be created', () => {
+    it('getSchedules', () => {
       // httpClient.get.and.returnValue(of())
-      service.getSocialMidiasSchedules();
-      expect(service.getSocialMidiasSchedules)
+      service.getSchedules();
+      expect(service.getSchedules)
         .toBeDefined();
     });
   });

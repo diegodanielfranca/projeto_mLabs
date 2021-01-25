@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImgUploaderComponent implements OnInit {
 
-  // public fileToUpload: File = null;
+  public previewImagePath: any;
   public imageError: string;
   public isImageSaved: boolean;
   public cardImageBase64: string;
@@ -16,18 +16,12 @@ export class ImgUploaderComponent implements OnInit {
 
   public ngOnInit(): void { }
 
-  // public handleFileInput(files: FileList) {
-  //   this.fileToUpload = files.item(0);
-  //   console.log('carregou essa merda');
-  //   console.log(this.fileToUpload);
-  // }
 
-  fileChangeEvent(fileInput: any) {
+  public fileChangeEvent(fileInput: any) {
     this.imageError = null;
     if (fileInput.target.files && fileInput.target.files[0]) {
       // Size Filter Bytes
       const max_size = 20971520;
-      const allowed_types = ['image/png', 'image/jpeg'];
       const max_height = 15200;
       const max_width = 25600;
 
@@ -37,7 +31,7 @@ export class ImgUploaderComponent implements OnInit {
 
         return false;
       }
-      
+
       const reader = new FileReader();
       reader.onload = (e: any) => {
         const image = new Image();
@@ -61,7 +55,7 @@ export class ImgUploaderComponent implements OnInit {
             const imgBase64Path = e.target.result;
             this.cardImageBase64 = imgBase64Path;
             this.isImageSaved = true;
-            // this.previewImagePath = imgBase64Path;
+            this.previewImagePath = imgBase64Path;
           }
         };
       };

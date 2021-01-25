@@ -3,23 +3,70 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PostTextComponent } from './post-text.component';
 
 describe('PostTextComponent', () => {
-  let component: PostTextComponent;
-  let fixture: ComponentFixture<PostTextComponent>;
+  let component;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PostTextComponent ]
-    })
-    .compileComponents();
-  }));
+  function setup() {
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PostTextComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new PostTextComponent();
+
+    return {
+      component
+    }
+
+  }
+
+  describe('should ngOnInit', () => {
+    const {
+      component
+    } = setup();
+  
+    it('ngOnInit', () => {
+      component.ngOnInit();
+      expect(component.ngOnInit)
+        .toBeDefined();
+    });
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  describe('should toggleEmojiPicker', () => {
+    const {
+        component,
+    } = setup();
+
+    it('toggleEmojiPicker', () => {
+        component.toggleEmojiPicker();
+        expect(component.showEmojiPicker)
+            .toBeDefined();
+    });
+});
+
+describe('should onFocus', () => {
+    const {
+        component,
+    } = setup();
+
+    it('onFocus', () => {
+        component.onFocus();
+        expect(component.showEmojiPicker)
+            .toBeDefined();
+    });
+});
+
+describe('should addEmoji', () => {
+    const {
+        component,
+    } = setup();
+
+    const event = {
+        emoji: {
+            native: ''
+        }
+    };
+
+    it('addEmoji', () => {
+        component.addEmoji(event);
+        expect(component.showEmojiPicker)
+            .toBeDefined();
+    });
+});
+  
 });

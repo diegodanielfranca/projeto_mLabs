@@ -1,0 +1,91 @@
+{
+  "social-networks": 
+    {
+        "data": [
+            {
+              "id": 1,
+              "name": "Facebook",
+              "icon": "facebook-f",
+              "status": "disabled"
+            },
+            {
+              "id": 2,
+              "name": "Linkedin",
+              "icon": "linkedin-in",
+              "status": "enabled"
+            },
+            {
+              "id": 3,
+              "name": "Instagram",
+              "icon": "instagram",
+              "status": "enabled"
+            },
+            {
+              "id": 4,
+              "name": "Youtube",
+              "icon": "youtube",
+              "status": "disabled"
+            },
+            {
+              "id": 5,
+              "name": "Pinterest",
+              "icon": "pinterest-p",
+              "status": "disabled"
+            },
+            {
+              "id": 6,
+              "name": "Twitter",
+              "icon": "twitter",
+              "status": "disabled"
+            }
+          ]
+    }
+  ,
+  "schedules": 
+      {
+        "data": [
+            {
+              "id": 1,
+              "social_network_key": [2, 3],
+              "media": "https://images.unsplash.com/photo-1600025282051-ec0c6bf3137a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+              "text": "Texto do post",
+              "publication_date": "2020-09-10T15:59:23.922Z",
+              "status_key": 1 
+            },
+            {
+              "id": 2,
+              "social_network_key": [2],
+              "media": "https://images.unsplash.com/photo-1600025282051-ec0c6bf3137a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+              "text": "Texto do post",
+              "publication_date": "2020-09-08T15:59:23.922Z",
+              "status_key": 3 
+            }
+          ]
+    }
+  ,
+  "schedules-status":
+	{
+      "data": [
+        {
+          "id": 1,
+          "name": "Agendado",
+          "color": "#2F80ED"
+        },
+        {
+          "id": 2,
+          "name": "Postado",
+          "color": "#27AE60"
+        },
+        {
+          "id": 3,
+          "name": "Não aprovado",
+          "color": "#F2C94C"
+        },
+        {
+          "id": 4,
+          "name": "Postado com ressalvas",
+          "color": "#EB5757"
+        }
+      ]
+    }
+}

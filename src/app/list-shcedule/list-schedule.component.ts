@@ -30,12 +30,12 @@ export class ListScheduleComponent implements OnInit {
     this.schedulesService.getSchedules()
       .subscribe((_res: any) => {
         this.schedule = _res.data;
-        this.formatDate(_res.data);
+        this.formatDate();
         this.getStatus();
       });
   }
 
-  private formatDate(res: any): void {
+  private formatDate(): void {
     const _array = this.schedule;
     let count = 0
 
@@ -49,14 +49,13 @@ export class ListScheduleComponent implements OnInit {
   }
 
   private getStatus(): void {
-    this.schedulesStatusService.getSchedules()
+    this.schedulesStatusService.getSocialMidiasSchedules()
       .subscribe((_res: any) => {
         this.filterStatus(_res.data);
       });
   }
 
   private filterStatus(_statusArray: Array<PostStatus>): void {
-    const status = new Array<any>();
     const _schedule = this.schedule;
 
     _schedule.forEach((_el: ScheduleModule) => {
