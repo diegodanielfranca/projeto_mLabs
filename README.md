@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## JSON-serer - services
 
-Run `json-server db.json` for a service server to provide the responses to the services with the JSON's files - ./db.json.
+Run `json-server db.json` for a service server to provide the responses to the services with the JSON's files - ./db.json. Set de port http://localhost:3000/.
 
 ## Code scaffolding
 
